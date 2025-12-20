@@ -1,231 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ગુજરાતી TRADER – Premium Trading Community</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ગુજરાતી TRADER – Premium Trading Community</title>
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)
-  }(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-  fbq('init', '2038102523416716');
-  fbq('track', 'PageView');
-  </script>
+fbq('init', '2038102523416716');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2038102523416716&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=2038102523416716&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;
+  --card-bg: rgba(255,255,255,0.07);
+  --muted:#d7d7d7;
+  --gold-grad: linear-gradient(90deg,#ffd700,#ffbb00,#ff9d00);
+}
 
-  <style>
-    :root{
-      --bg:#000;
-      --card-bg: rgba(255,255,255,0.07);
-      --muted:#d7d7d7;
-      --gold-grad: linear-gradient(90deg,#ffd700,#ffbb00,#ff9d00);
-    }
+body {
+  margin:0;
+  background:var(--bg);
+  color:#fff;
+  font-family:'Poppins',sans-serif;
+}
 
-    body {
-      margin:0;
-      background:var(--bg);
-      color:#fff;
-      font-family:'Poppins',sans-serif;
-    }
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:36px 18px;
+}
 
-    .container {
-      max-width:1100px;
-      margin:auto;
-      padding:36px 18px;
-    }
+.hero {
+  text-align:center;
+  padding:48px 18px;
+  background: linear-gradient(180deg,#000 0%, #111 100%);
+  border-radius:14px;
+}
 
-    .hero {
-      text-align:center;
-      padding:48px 18px;
-      background: linear-gradient(180deg,#000 0%, #111 100%);
-      border-radius:14px;
-    }
+.logo {
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  animation: glow 3s infinite ease-in-out;
+}
 
-    .logo {
-      width:140px;
-      height:140px;
-      border-radius:50%;
-      animation: glow 3s infinite ease-in-out;
-    }
+@keyframes glow {
+  0% { filter: drop-shadow(0 0 8px #ffd700); }
+  50% { filter: drop-shadow(0 0 20px #ffbf00); }
+  100% { filter: drop-shadow(0 0 8px #ffd700); }
+}
 
-    @keyframes glow {
-      0% { filter: drop-shadow(0 0 8px #ffd700); }
-      50% { filter: drop-shadow(0 0 20px #ffbf00); }
-      100% { filter: drop-shadow(0 0 8px #ffd700); }
-    }
+.title {
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;
+  font-size:38px;
+  margin:10px 0;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    .title {
-      font-family:'Montserrat',sans-serif;
-      font-weight:900;
-      font-size:38px;
-      margin:10px 0;
-      background: var(--gold-grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.subtitle {
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:18px;
+}
 
-    .subtitle {
-      color:var(--muted);
-      font-size:18px;
-      margin-bottom:18px;
-    }
+/* Neon Telegram Button */
+.telegram-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
 
-    /* ===== NEON TELEGRAM BUTTON ===== */
-    .telegram-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 36px;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing: 0.6px;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 50px;
+  background: linear-gradient(135deg, #ff9d00, #ffbf00, #0000ff);
+  background-size: 300% 300%;
 
-      background: linear-gradient(135deg, #ffd700, #ff9d00, #0000ff);
-      background-size: 300% 300%;
+  box-shadow:
+    0 0 10px rgba(0,198,255,0.6),
+    0 0 25px rgba(255,255,255,0.4),
+    0 0 45px rgba(0,198,255,0.7);
 
-      box-shadow:
-        0 0 10px rgba(0,198,255,0.6),
-        0 0 25px rgba(255,255,255,0.4),
-        0 0 45px rgba(0,198,255,0.7);
+  animation:
+    neonGlow 3s ease infinite,
+    zoomPulse 1.6s ease-in-out infinite;
 
-      animation:
-        neonGlow 3s ease infinite,
-        zoomPulse 1.6s ease-in-out infinite;
+  transition: transform 0.25s ease;
+}
 
-      transition: transform 0.25s ease;
-    }
+.telegram-btn:hover {
+  transform: scale(1.12);
+}
 
-    .telegram-btn:hover {
-      transform: scale(1.12);
-    }
+@keyframes neonGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    @keyframes neonGlow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+@keyframes zoomPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
 
-    @keyframes zoomPulse {
-      0%   { transform: scale(1); }
-      50%  { transform: scale(1.08); }
-      100% { transform: scale(1); }
-    }
+.section {
+  max-width:850px;
+  margin:20px auto;
+  padding:26px;
+  background:var(--card-bg);
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.12);
+}
 
-    .section {
-      max-width:850px;
-      margin:20px auto;
-      padding:26px;
-      background:var(--card-bg);
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,0.12);
-    }
+.section h2 {
+  font-size:22px;
+  margin-bottom:10px;
+  background:var(--gold-grad);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    .section h2 {
-      font-size:22px;
-      margin-bottom:10px;
-      background:var(--gold-grad);
-      -webkit-background-clip:text;
-      -webkit-text-fill-color:transparent;
-    }
+.section p {
+  color:#e8e8e8;
+  line-height:1.7;
+  font-size:15.5px;
+}
 
-    .section p {
-      color:#e8e8e8;
-      line-height:1.7;
-      font-size:15.5px;
-    }
+.footer {
+  text-align:center;
+  color:#aaa;
+  padding:26px 10px;
+  font-size:13px;
+}
 
-    .footer {
-      text-align:center;
-      color:#aaa;
-      padding:26px 10px;
-      font-size:13px;
-    }
-
-    @media (max-width:520px){
-      .title { font-size:28px; }
-      .logo { width:120px; height:120px; }
-    }
-  </style>
+@media (max-width:520px){
+  .title { font-size:28px; }
+  .logo { width:120px; height:120px; }
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
+<div class="container">
 
-    <div class="hero">
-      <img class="logo" src="https://uploads.onecompiler.io/445e5df86/445tc7ue3/330.png" alt="Gujarati Trader">
+  <div class="hero">
+    <img class="logo" src="https://uploads.onecompiler.io/445e5df86/445tc7ue3/330.png" alt="Gujarati Trader">
+    <div class="title">ગુજરાતી TRADER</div>
+    <div class="subtitle">Gujarati Traders’ Learning & Community Platform</div>
 
-      <div class="title">ગુજરાતી TRADER</div>
-      <div class="subtitle">Gujarati Traders’ Learning & Community Platform</div>
-
-      <!-- ONE-TIME SUBSCRIBE BUTTON -->
-      <a class="telegram-btn"
-         href="https://t.me/+Rgtl9JMaCTFiMWQ1"
-         target="_blank"
-         rel="noopener noreferrer"
-         onclick="trackSubscribeOnce();">
-        🚀 JOIN OUR TELEGRAM
-      </a>
-    </div>
-
-    <div class="section">
-      <h2>📘 What You Will Learn</h2>
-      <p>
-        • Chart reading basics<br>
-        • Market trend concepts<br>
-        • Price action fundamentals<br>
-        • Technical patterns<br>
-        • Risk & money management<br>
-        • Trading psychology
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>💡 Why Join?</h2>
-      <p>
-        • Daily trading insights<br>
-        • Gujarati trader community<br>
-        • Beginner-friendly learning
-      </p>
-    </div>
-
-    <div class="footer">
-      © 2025 ગુજરાતી TRADER – All Rights Reserved
-    </div>
-
+    <!-- ONE-TIME SUBSCRIBE BUTTON -->
+    <a class="telegram-btn"
+       href="https://t.me/+Rgtl9JMaCTFiMWQ1"
+       target="_blank"
+       rel="noopener noreferrer"
+       onclick="trackSubscribeOnce();">
+      🚀 JOIN OUR TELEGRAM
+    </a>
   </div>
 
-  <!-- ONE-TIME SUBSCRIBE TRACKING SCRIPT -->
-  <script>
-    function trackSubscribeOnce() {
-      if (!localStorage.getItem('telegram_subscribed')) {
-        fbq('trackCustom', 'Subscribe', {
-          content_name: 'Gujarati Trader Telegram',
-          content_category: 'Trading Community'
-        });
-        localStorage.setItem('telegram_subscribed', 'true');
-      }
-    }
-  </script>
+  <div class="section">
+    <h2>📘 What You Will Learn</h2>
+    <p>
+      • Chart reading basics<br>
+      • Market trend concepts<br>
+      • Price action fundamentals<br>
+      • Technical patterns<br>
+      • Risk & money management<br>
+      • Trading psychology
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>💡 Why Join?</h2>
+    <p>
+      • Daily trading insights<br>
+      • Gujarati trader community<br>
+      • Beginner-friendly learning
+    </p>
+  </div>
+
+  <div class="footer">
+    © 2025 ગુજરાતી TRADER – All Rights Reserved
+  </div>
+</div>
+
+<!-- ONE-TIME SUBSCRIBE TRACKING SCRIPT -->
+<script>
+function trackSubscribeOnce() {
+  if (!localStorage.getItem('telegram_subscribed')) {
+    fbq('trackCustom', 'Subscribe', {
+      content_name: 'Gujarati Trader Telegram',
+      content_category: 'Trading Community'
+    });
+    localStorage.setItem('telegram_subscribed', 'true');
+  }
+}
+</script>
 
 </body>
 </html>
-
