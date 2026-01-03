@@ -1,0 +1,3 @@
+POST /login.php
+POST /verify-otp.php
+GET  /dashboard-data.php
