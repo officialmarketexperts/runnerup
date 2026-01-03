@@ -1,190 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gujarati Trader</title>
-
-<!-- ================= META PIXEL (NEW ONLY) ================= -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-
-fbq('init', '2038102523416716');
-fbq('track', 'PageView');
-
-
-</script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2038102523416716&ev=PageView&noscript=1"
-/></noscript>
-<!-- ================= END META PIXEL ================= -->
-
-<style>
-*{box-sizing:border-box}
-body{
- margin:0;
- font-family:Segoe UI,Arial,sans-serif;
- background:linear-gradient(180deg,#eef2ff,#f8fafc);
- color:#111;
- text-align:center;
-}
-
-/* MAIN CARD */
-.container{
- max-width:420px;
- margin:28px auto;
- background:#ffffff;
- border-radius:22px;
- padding:30px 18px 40px;
- box-shadow:0 25px 60px rgba(0,0,0,.12);
-}
-
-/* LOGO */
-.logo{
- width:140px;
- height:140px;
- border-radius:50%;
- margin:10px auto 14px;
- box-shadow:0 12px 28px rgba(0,0,0,.25);
- overflow:hidden;
- border:4px solid #e5e7eb;
-}
-.logo img{
- width:100%;
- height:100%;
- object-fit:cover;
-}
-
-/* TITLE */
-h1{
- font-size:30px;
- font-weight:900;
- margin:10px 0 6px;
- letter-spacing:.6px;
-}
-.subs{
- font-size:14px;
- color:#6b7280;
- margin-bottom:18px;
-}
-
-/* INFO */
-.info{
- font-size:15px;
- line-height:1.8;
- color:#374151;
- margin:10px 0 26px;
-}
-.info div{
- margin:7px 0;
-}
-
-/* BUTTON */
-.join-btn{
- display:block;
- width:100%;
- max-width:360px;
- margin:0 auto 20px;
- padding:17px;
- font-size:18px;
- font-weight:900;
- color:#fff;
- text-decoration:none;
- border-radius:14px;
- background:linear-gradient(90deg,#2563eb,#4f46e5);
- box-shadow:0 14px 32px rgba(79,70,229,.45);
- transition:.25s ease;
-}
-.join-btn:hover{
- transform:translateY(-2px);
- box-shadow:0 18px 38px rgba(79,70,229,.55);
-}
-
-/* TRUST */
-.stars{
- font-size:20px;
- color:#f59e0b;
- margin-bottom:8px;
-}
-.trust{
- font-size:13px;
- color:#6b7280;
- margin-bottom:18px;
-}
-
-/* FOOTER */
-.footer{
- font-size:12px;
- color:#9ca3af;
- line-height:1.6;
-}
-</style>
+<title>Shyam ADS Manager | Login</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+<body class="dark">
 
-<body>
-
-<div class="container">
-
-<!-- LOGO -->
-<div class="logo">
- <img src="https://uploads.onecompiler.io/445e5df86/445tc7ue3/330.png" alt="Gujarati Trader">
-</div>
-
-<!-- TITLE -->
-<h1>GUJARATI TRADER</h1>
-<div class="subs">20,000+ learners • Trusted community</div>
-
-<!-- INFO -->
-<div class="info">
- <div>📊 <b>Market Education & Chart Reading</b></div>
- <div>📈 Nifty • BankNifty • Stock Analysis</div>
- <div>🛡️ Risk Management & Discipline</div>
- <div>🎯 Learn with clarity, not false promises</div>
-</div>
-
-<!-- BUTTON -->
-<a class="join-btn" id="joinBtn"
- href="https://t.me/+Rgtl9JMaCTFiMWQ1"
- target="_blank">
-JOIN TELEGRAM CHANNEL
-</a>
-
-<!-- TRUST -->
-<div class="stars">⭐⭐⭐⭐⭐</div>
-<div class="trust">Rated highly by community learners</div>
-
-<!-- FOOTER -->
-<div class="footer">
-Educational purpose only. No tips, no guarantees.<br>
-Market participation involves risk.
-</div>
-
+<div class="card">
+  <h1><i class="fa-solid fa-chart-line"></i> Shyam ADS Manager</h1>
+  <input placeholder="Username">
+  <input type="password" placeholder="Password">
+  <button onclick="goOTP()">Login</button>
 </div>
 
 <script>
-/* TELEGRAM CLICK TRACKING */
-document.addEventListener("DOMContentLoaded", function () {
-  const joinBtn = document.getElementById("joinBtn");
-  if (joinBtn) {
-    joinBtn.addEventListener("click", function () {
-      if (typeof fbq === 'function') {
-        fbq('trackCustom','JoinTelegram');
-        fbq('track','Lead');
-      }
-      this.style.pointerEvents = "none";
-    });
-  }
-});
+function goOTP(){
+  window.location="otp.html";
+}
 </script>
-
 </body>
 </html>
