@@ -1,23 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Shyam ADS Manager | Login</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body class="dark">
+<meta charset="UTF-8">
+<title>Shyam ADS Manager</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="card">
-  <h1><i class="fa-solid fa-chart-line"></i> Shyam ADS Manager</h1>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+
+body{
+  background:#050014;
+  color:#fff;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.gold{background:#1a1200}
+
+.card{
+  width:380px;
+  padding:30px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(18px);
+  box-shadow:0 0 40px rgba(255,215,0,.3);
+  text-align:center;
+}
+
+input{
+  width:100%;
+  margin:12px 0;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  outline:none;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(135deg,gold,#ffcc00);
+  font-weight:700;
+  cursor:pointer;
+}
+
+.hidden{display:none}
+
+.loader{
+  width:70px;
+  height:70px;
+  border:6px solid #333;
+  border-top:6px solid gold;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  margin:20px auto;
+}
+
+@keyframes spin{100%{transform:rotate(360deg)}}
+
+.stats{
+  display:flex;
+  gap:15px;
+  margin:20px 0;
+}
+
+.box{
+  flex:1;
+  background:rgba(255,255,255,0.08);
+  padding:15px;
+  border-radius:14px;
+}
+
+canvas{margin-top:20px}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div class="card" id="login">
+  <h2><i class="fa-solid fa-chart-line"></i> Shyam ADS Manager</h2>
   <input placeholder="Username">
   <input type="password" placeholder="Password">
   <button onclick="goOTP()">Login</button>
 </div>
 
+<!-- OTP -->
+<div class="card hidden" id="otp">
+  <h3>Two-Step Verification</h3>
+  <input maxlength="6" placeholder="Enter OTP">
+  <button onclick="goLoading()">Verify</button>
+</div>
+
+<!-- LOADING -->
+<div class="card hidden" id="loading">
+  <div class="loader"></div>
+  <p>Initializing Dashboard...</p>
+</div>
+
+<!-- DASHBOARD -->
+<div class="card hidden" id="dashboard" style="width:420px">
+  <h3>ADS Dashboard</h3>
+  <button onclick="toggleTheme()">Dark / Gold</button>
+
+  <div class="stats">
+    <div class="box"><h2 id="c1">0</h2><p>Campaigns</p></div>
+    <div class="box"><h2 id="c2">0</h2><p>Clicks</p></div>
+    <div class="box"><h2 id="c3">0</h2><p>Revenue</p></div>
+  </div>
+
+  <canvas id="chart"></canvas>
+</div>
+
 <script>
 function goOTP(){
-  window.location="otp.html";
+  login.classList.add("hidden");
+  otp.classList.remove("hidden");
+}
+
+function goLoading(){
+  otp.classList.add("hidden");
+  loading.classList.remove("hidden");
+  setTimeout(()=>{
+    loading.classList.add("hidden");
+    dashboard.classList.remove("hidden");
+    animate("c1",24);
+    animate("c2",1450);
+    animate("c3",780);
+    drawChart();
+  },2000);
+}
+
+function animate(id,end){
+  let v=0;
+  let el=document.getElementById(id);
+  let i=setInterval(()=>{
+    el.innerText=v;
+    v++;
+    if(v>end)clearInterval(i);
+  },20);
+}
+
+function drawChart(){
+  new Chart(chart,{
+    type:"line",
+    data:{
+      labels:["Mon","Tue","Wed","Thu","Fri"],
+      datasets:[{
+        label:"Revenue",
+        data:[120,300,250,480,700],
+        borderColor:"gold",
+        fill:false
+      }]
+    }
+  });
+}
+
+let gold=false;
+function toggleTheme(){
+  document.body.classList.toggle("gold");
 }
 </script>
+
 </body>
 </html>
