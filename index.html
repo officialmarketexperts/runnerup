@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gujarati Trader</title>
 
-<!-- ================= FIXED META PIXEL ================= -->
+<!-- ================= META PIXEL ================= -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,7 +16,6 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2281635745651402');
-// Removed duplicate PageView - automatic fires once
 </script>
 <noscript>
   <img height="1" width="1" style="display:none"
@@ -170,49 +169,46 @@ h1{font-size:28px;letter-spacing:1.5px}
   </div>
 
 <h1>GUJRATI👑TRADER</h1>
-  <div class="sub">Market Education • Discipline • Risk Awareness</div>
+<div class="sub">Market Education • Discipline • Risk Awareness</div>
 
-  <div class="info-box">
-    <h3>🎯 What You'll Learn:</h3>
-    <ul>
-      <li>📊 Chart Reading & Technical Levels</li>
-      <li>📈 Nifty • BankNifty • Stocks</li>
-      <li>🛡️ Risk Management Education</li>
-    </ul>
-  </div>
-
-  <a class="join-btn" href="#" onclick="trackTelegramSubscribe()">
-    🚀 JOIN OUR TELEGRAM NOW
-  </a>
-
-  <div class="live">🔴 Community Learning Update</div>
-
-  <div class="client-box">
-    <div class="profit">Live Chart Learning</div>
-    <div class="small">Educational market discussion only</div>
-  </div>
-
-  <div class="warn">
-    ⚠️ Educational purpose only. No tips, no guarantees.<br>
-    Market participation involves risk. Trade responsibly.
-  </div>
+<div class="info-box">
+<h3>🎯 What You'll Learn:</h3>
+<ul>
+<li>📊 Chart Reading & Technical Levels</li>
+<li>📈 Nifty • BankNifty • Stocks</li>
+<li>🛡️ Risk Management Education</li>
+</ul>
 </div>
 
-<!-- ✅ FIXED & FASTER TELEGRAM SCRIPT -->
+<a class="join-btn" href="#" onclick="trackTelegramSubscribe()">
+🚀 JOIN OUR TELEGRAM NOW
+</a>
+
+<div class="live">🔴 Community Learning Update</div>
+
+<div class="client-box">
+<div class="profit">Live Chart Learning</div>
+<div class="small">Educational market discussion only</div>
+</div>
+
+<div class="warn">
+⚠️ Educational purpose only. No tips, no guarantees.<br>
+Market participation involves risk. Trade responsibly.
+</div>
+</div>
+
+<!-- ✅ TELEGRAM & META PIXEL SCRIPT -->
 <script>
 function trackTelegramSubscribe(){
+  // Fire FB Pixel only once per device
   if(!localStorage.getItem('tg_subscribed')){
     fbq('track','Subscribe',{platform:'telegram'});
-    localStorage.setItem('tg_subscribed','1');
+    localStorage.setItem('tg_subscribed','1'); // mark as tracked
   }
-  // Instant redirect (50ms)
-  setTimeout(function(){
-    window.location.href = "https://t.me/+u6X4isPVqWRhYjM9";
-  }, 50);
+  // Redirect to Telegram on every click
+  window.location.href = "https://t.me/+u6X4isPVqWRhYjM9";
 }
 </script>
 
 </body>
 </html>
-
-
